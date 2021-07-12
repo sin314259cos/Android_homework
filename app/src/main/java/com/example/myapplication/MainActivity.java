@@ -6,6 +6,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.os.Bundle;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -25,6 +27,20 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("search","change");
             }
         });
+
+        CheckBox CB1 =findViewById(R.id.CB1);
+        CB1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked == true){
+                    Log.d("search","True");
+                }else{
+                    Log.d("search","False");
+                }
+            }
+        });
     }
+
+
 }
 
